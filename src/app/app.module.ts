@@ -1,6 +1,5 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
-
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF} from '@angular/common';  
 import { ReactiveFormsModule } from "@angular/forms";
@@ -18,11 +17,10 @@ import { MenuComponent } from "./components/menu/menu.component";
 import { InicioComponent } from "./components/inicio/inicio.component";
 import { ArticulosComponent } from "./components/articulos/articulos.component";
 import { ArticulosFamiliasComponent } from "./components/articulos-familias/articulos-familias.component";
-import {ClientesComponet } from "./components/clientes/clientes.component";
-
+import {ClientesComponet } from "./components/cliente/clientes.component";
 import { ModalDialogComponent } from "./components/modal-dialog/modal-dialog.component";
 import { MockClientesService } from './services/mock-clientes.service';
-import { ClientesComponent } from './components/clientes/clientes/clientes.component';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +40,8 @@ import { ClientesComponent } from './components/clientes/clientes/clientes.compo
       { path: '', redirectTo: '/inicio', pathMatch: 'full' },
       { path: 'inicio', component: InicioComponent },
       { path: 'articulos', component: ArticulosComponent },
-      { path: 'articulosfamilias', component: ArticulosFamiliasComponent }
+      { path: 'articulosfamilias', component: ArticulosFamiliasComponent },
+      { path: 'clientes', component: ArticulosComponent }
     ]),
     NgbPaginationModule,
     NgbModalModule,
