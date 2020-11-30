@@ -18,10 +18,11 @@ import { MenuComponent } from "./components/menu/menu.component";
 import { InicioComponent } from "./components/inicio/inicio.component";
 import { ArticulosComponent } from "./components/articulos/articulos.component";
 import { ArticulosFamiliasComponent } from "./components/articulos-familias/articulos-familias.component";
-
+import {ClientesComponet } from "./components/clientes/clientes.component";
 
 import { ModalDialogComponent } from "./components/modal-dialog/modal-dialog.component";
 import { MockClientesService } from './services/mock-clientes.service';
+import { ClientesComponent } from './components/clientes/clientes/clientes.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { MockClientesService } from './services/mock-clientes.service';
     ArticulosComponent,
     ArticulosFamiliasComponent,
     ModalDialogComponent,
+    ClientesComponent,
   ],
   imports: [
     BrowserModule,
