@@ -21,6 +21,7 @@ import { ArticulosFamiliasComponent } from "./components/articulos-familias/arti
 
 
 import { ModalDialogComponent } from "./components/modal-dialog/modal-dialog.component";
+import { MockClientesService } from './services/mock-clientes.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { ModalDialogComponent } from "./components/modal-dialog/modal-dialog.com
   entryComponents: [ModalDialogComponent],
   providers: [
      {provide: APP_BASE_HREF, useValue : '/' },
-    { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true, providers: [MockClientesService] }
   ],
   bootstrap: [AppComponent]
 })
